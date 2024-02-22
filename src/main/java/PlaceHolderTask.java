@@ -19,7 +19,7 @@ public class PlaceHolderTask {
         updateUser.put("name", "Ievhen Nesterenko");
         updateUser.put("username", "CezarY");
 
-        placeHolder.updateNewUser(4, updateUser);
+        placeHolder.updateNewUser(testId, updateUser);
 
 //      3.
         System.out.println("TASK 1.3============================================================================");
