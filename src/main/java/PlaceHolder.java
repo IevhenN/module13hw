@@ -145,10 +145,11 @@ public class PlaceHolder {
         }.getType();
         List<HashMap<String, String>> responseList = new Gson().fromJson(response.body(), listType);
 
-        List<HashMap<String, String>> completedToDo = responseList.stream().filter(i -> Boolean.parseBoolean(i.get("completed"))).peek((i) -> {
-            i.remove("userId");
-            i.remove("completed");
-        }).collect(Collectors.toList());
+        List<HashMap<String, String>> completedToDo = responseList.stream().filter(i -> !Boolean.parseBoolean(i.get("completed")))
+                .peek((i) -> {
+                    i.remove("userId");
+                    i.remove("completed");
+                }).collect(Collectors.toList());
 
         System.out.println("completedToDo = " + completedToDo);
     }

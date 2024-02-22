@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class PlaceHolderTask {
     public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
         PlaceHolder placeHolder = new PlaceHolder();
-        int testId = 4;
+        int testId = 1;
         String testUserName = "Leanne Graham";
 
 //      TASK 1
@@ -47,6 +47,7 @@ public class PlaceHolderTask {
 //      TASK 3
         System.out.println("TASK 3==============================================================================");
         placeHolder.getNonCompletedToDo(testId);
+
     }
 
     public static String getNewTestUserJSon() {
